@@ -26,7 +26,9 @@ Android-Learning-Note
 * 網址 - <http://nineoldandroids.com>
 * 描述 -原本3.0才有的Animation,支援先前版本
 
-    ObjectAnimator.foFloat(myObject, "translationY", -myObject.getHeight()).start();
+
+``ObjectAnimator.foFloat(myObject, "translationY", -myObject.getHeight()).start();``
+
 
 ##UnifiedPreference
 * 網址 - <https://github.com/saik0/UnifiedPreference#how-to-use>
@@ -83,7 +85,7 @@ Google自己提供的向下相容元件
 
 * 描述 - HttpURLConnection 超難用
 
-    HttpRequest.get("http://google.com").receive(System.out);
+``HttpRequest.get("http://google.com").receive(System.out);``
 
 
 
@@ -110,8 +112,7 @@ Google自己提供的向下相容元件
 * 網址 - <https://code.google.com/p/json-path/>
 * 描述 - 類似Css的selector
 
-    String author = JsonPath.read(json, "$.store.book[1].author);
-
+``String author = JsonPath.read(json, "$.store.book[1].author);``
 
 ##jOOX - Java Object Oriented XML
 * 網址 - <https://github.com/jOOQ/jOOX>
