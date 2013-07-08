@@ -3,8 +3,8 @@ Android-Learning-Note
 
 這個筆記大部分都是由這篇`A Deep Dive into Open Source Android Development`整理出來的，後續會慢慢整理這些Open Source怎麼安裝與使用的筆記，如果有錯誤在請大家指正。
 
-> [Youtube]
-> [Slide]
+* [Youtube]
+* [Slide]
 
 [Youtube]: http://www.youtube.com/watch?v=gwB8xkTckKc&hd=1http://taybenlor.com/2013/05/21/designing-for-ios.html
 [Slide]: http://www.slideshare.net/wuman/a-deep-dive-into-open-source-android-development
