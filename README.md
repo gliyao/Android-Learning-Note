@@ -17,6 +17,47 @@ Android-Learning-Note
 * 描述 - Action bar是android 3.0才開始有的功能，而ActionBarSherlock則是把該功能支援到先前的Android版本。
     * Split Action Bar - 當你的actionBarButton太多的時候，會自動轉成tab
     * Contextual Action Bars - 根據User的動作(狀態)，改變actionBar給的樣式
+* 參考 - <http://www.xue5.com/Mobile/Android/688706.html>
+
+Steps
+1. Add library - 右鍵 > Properites > Android > Add..
+2. Remove support-v4 - 把android-support-v4移除
+3. Modify AndroidManifes.xml
+
+```xml
+<uses-sdk
+    android:minSdkVersion="7"
+    android:targetSdkVersion="16" />
+
+<uses-feature
+    android:name="android.hardware.touchscreen"
+    android:required="false" />
+```
+
+```xml
+android:theme="@style/Theme.Sherlock" 
+<application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Sherlock" >
+```
+
+4. 修改相對硬類別
+
+[class]
+android.app.Activity -> com.actionbarsherlock.app.SherlockActivity
+android.app.Fragment -> android.support.v4.app.Fragment
+android.app.FragmentTransaction -> android.support.v4.app.FragmentTransaction
+android.view.Menu -> com.actionbarsherlock.view.Menu
+android.view.MenuItem -> com.actionbarsherlock.view.MenuItem
+[functions]
+getFragmentManager -> getSupportFragmentManager
+getMenuInflater -> getSupportMenuInflater
+getActionBar -> getSupportActionBar
+
+
+
+
 
 ##HoloEverywhere
 * 網址 - <https://github.com/Prototik/HoloEverywhere>
@@ -52,15 +93,25 @@ Google自己提供的向下相容元件
 * 描述 - 簡單的.jar檔使用，非常輕量化，支援左右menu，
 
 
-```java
+
 在Activity.onCreate 設定物件
-mSlidingMenu = new SimpleSideDrawer( this );
-mSlidingMenu.setLeftBehindContentView( R.layout.behind_menu_left );
+```java
+protected void onCreate(Bundle data) {
+    super.onCreate( data );
+    setContentView( R.layout.main );
 
-//宣告右側menu
+    mSlidingMenu = new SimpleSideDrawer( this );
+    mSlidingMenu.setLeftBehindContentView( R.layout.behind_menu_left );
+}
+```
+
+宣告右側menu
+```java
 mSlidingMenu.setRightBehindContentView( R.layout.behind_menu_right )
+```
 
-//開關menu
+開關menu
+```java
 mSlidingMenu.toggleDrawer();
 ```
 
@@ -73,7 +124,8 @@ mSlidingMenu.toggleDrawer();
 
 ##Crouton
 * 網址 - <https://github.com/neofoniemobile/Crouton>
-* 描述 - 類似toast的錯誤訊息，but inside app content.
+* 描述 - In layout toast notification.
+
 
 ##Android-Query
 * 網址 - <https://code.google.com/p/android-query/>
