@@ -44,16 +44,16 @@ android:theme="@style/Theme.Sherlock"
 
 4. 修改相對硬類別
 
-[class]
-android.app.Activity -> com.actionbarsherlock.app.SherlockActivity
-android.app.Fragment -> android.support.v4.app.Fragment
-android.app.FragmentTransaction -> android.support.v4.app.FragmentTransaction
-android.view.Menu -> com.actionbarsherlock.view.Menu
-android.view.MenuItem -> com.actionbarsherlock.view.MenuItem
-[functions]
-getFragmentManager -> getSupportFragmentManager
-getMenuInflater -> getSupportMenuInflater
-getActionBar -> getSupportActionBar
+- [class]
+    - android.app.Activity -> com.actionbarsherlock.app.SherlockActivity
+    - android.app.Fragment -> android.support.v4.app.Fragment
+    - android.app.FragmentTransaction -> android.support.v4.app.FragmentTransaction
+    - android.view.Menu -> com.actionbarsherlock.view.Menu
+    - android.view.MenuItem -> com.actionbarsherlock.view.MenuItem
+    - [functions]
+- getFragmentManager -> getSupportFragmentManager
+    - getMenuInflater -> getSupportMenuInflater
+    - getActionBar -> getSupportActionBar
 
 
 
