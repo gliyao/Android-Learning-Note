@@ -50,8 +50,8 @@ android:theme="@style/Theme.Sherlock"
     - android.app.FragmentTransaction -> android.support.v4.app.FragmentTransaction
     - android.view.Menu -> com.actionbarsherlock.view.Menu
     - android.view.MenuItem -> com.actionbarsherlock.view.MenuItem
-    - [functions]
-- getFragmentManager -> getSupportFragmentManager
+- [functions]
+    - getFragmentManager -> getSupportFragmentManager
     - getMenuInflater -> getSupportMenuInflater
     - getActionBar -> getSupportActionBar
 
