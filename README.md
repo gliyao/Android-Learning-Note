@@ -47,9 +47,22 @@ Google自己提供的向下相容元件
 * 網址 - <https://github.com/SimonVT/android-menudrawer>
 * 描述 - 用貝氏曲線實作的Menu
 
-##SimepleMenuDrawer
+##SimpleMenuDrawer
 * 網址 - <https://github.com/adamrocker/simple-side-drawer>
-* 描述 - 簡單的.jar檔使用，非常輕量化，支援左右menu
+* 描述 - 簡單的.jar檔使用，非常輕量化，支援左右menu，
+
+
+```java
+在Activity.onCreate 設定物件
+mSlidingMenu = new SimpleSideDrawer( this );
+mSlidingMenu.setLeftBehindContentView( R.layout.behind_menu_left );
+
+//宣告右側menu
+mSlidingMenu.setRightBehindContentView( R.layout.behind_menu_right )
+
+//開關menu
+mSlidingMenu.toggleDrawer();
+```
 
 ##Android-PullToRefresh
 * 網址 - <https://github.com/chrisbanes/Android-PullToRefresh>
@@ -98,6 +111,7 @@ Google自己提供的向下相容元件
 ##Otto
 * 網址 - <http://square.github.io/otto/>
 * 描述 - An event bus forked from `EventBus` of Google Guava targeting the Android Platform.
+* 範例 - <http://asherson.wordpress.com/2013/02/20/otto-event-bus-for-android/>
 
 #Data Representation and Processing
 ##GSON
